@@ -10,4 +10,5 @@ function sumFibo(x) {
     }
     return sum;
 }
+
 console.log("Sum is: " + sumFibo(10));
