@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="4465926c-b291-4b32-b1d4-dd4d55588874" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/IArea.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/IArea.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/IArea.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/main.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/main.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/rectangle.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/rectangle.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/rectangle.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/shape.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/shape.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/shape.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/IArea.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rectangle.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/shape.ts" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="tsconfig.json" />
+        <option value="package.json" />
+        <option value="TypeScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectId" id="1yqMl72JXIbNkfPw2qTGrX0Vx2e" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="MTConfigurable" />
+    <property name="ts.external.directory.path" value="D:\GitHub\C0421G1_NguyenThanhLam_Module5\02_typescript\thuchanh\bai3\node_modules\typescript\lib" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4465926c-b291-4b32-b1d4-dd4d55588874" name="Changes" comment="" />
+      <created>1632974814815</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1632974814815</updated>
+      <workItem from="1632974816833" duration="131000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+    <option name="exactExcludedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/src/main.js" />
+      </list>
+    </option>
+  </component>
+</project>
