@@ -1,0 +1,9 @@
+<h2>Choose a color:</h2>
+<select style="height: 30px" #element (change)="changeColor(element.value)">
+  <option value="black">Default color: black</option>
+  <option value="red">Red</option>
+  <option value="green">Green</option>
+  <option value="blue">Blue</option>
+  <option value="yellow">Yellow</option>
+</select>
+<h3 [style.color]="color">Change color of word by choice</h3>
