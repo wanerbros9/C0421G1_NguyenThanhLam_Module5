@@ -1,0 +1,112 @@
+<div class="container-fluid" style="padding-bottom: 100px; padding-top: 30px">
+  <div class="row">
+    <div class="col-lg-8">
+      <h3>
+        Employee List
+      </h3>
+    </div>
+    <div class="col-lg-4">
+      <form class="d-flex" method="post" action="">
+        <input class="form-control me-2" style="width: 50%" type="text" placeholder="Search" aria-label="Search"
+               name="name">
+        <button class="btn btn-outline-dark" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-12">
+      <table class="table">
+        <thead>
+        <tr align="center">
+          <th scope="col">STT</th>
+          <th scope="col">Name</th>
+          <th scope="col">Birth Day</th>
+          <th scope="col">Id Card</th>
+          <th scope="col">Salary</th>
+          <th scope="col">Phone</th>
+          <th scope="col">Email</th>
+          <th scope="col">Address</th>
+          <th scope="col">Position</th>
+          <th scope="col">Education Degree</th>
+          <th scope="col">Division</th>
+          <th scope="col" colspan="2">Action</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr align="center">
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td><a class="btn btn-warning">Edit</a>
+          </td>
+          <td>
+            <button type="button" data-bs-toggle="modal"
+                    class="btn btn-danger" data-bs-target="#exampleModal"
+                    onclick="">Delete
+            </button>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-12">
+      <a class="btn bg-success" style="color: white">
+        Add new employee
+      </a>
+    </div>
+  </div>
+  <nav aria-label="Page navigation example">
+    <ul class="pagination justify-content-center">
+      <li class="page-item">
+        <a class="page-link" href="" tabindex="-1" aria-disabled="true">Previous</a>
+      </li>
+      <li class="page-item">
+        <a class="page-link" href="">Next</a>
+      </li>
+    </ul>
+  </nav>
+</div>
+<div class="row">
+  <div class="col-lg-12">
+    <div align="center">
+      <span></span>/<span></span>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Delete Employee</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Do you want to delete ?
+      </div>
+      <form method="post" action="/employee/delete">
+        <div class="modal-footer">
+          <input type="hidden" name="id" id="employeeId">
+          <input type="hidden" name="action" value="delete">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+            Close
+          </button>
+          <button type="submit" class="btn btn-danger">Yes</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

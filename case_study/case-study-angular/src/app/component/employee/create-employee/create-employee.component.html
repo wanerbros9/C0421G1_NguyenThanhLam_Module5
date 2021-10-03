@@ -1,0 +1,89 @@
+<div class="container-fluid" style="padding-bottom: 10px">
+  <div class="row">
+    <div class="col-lg-3"></div>
+    <div class="col-lg-6">
+      <form action="" object="${employeeDto}" method="post">
+        <legend align="center">Create Employee</legend>
+        <div class="mb-3">
+          <label for="employeeName" class="form-label">Employee Name</label>
+          <input type="text" name="employeeName" class="form-control" id="employeeName"
+                 field="*{employeeName}"/>
+          <p style="color: red" if="${#fields.hasErrors('employeeName')}" errors="*{employeeName}"></p>
+        </div>
+        <div class="mb-3">
+          <label for="position">Position</label>
+          <select field="*{position}" name="position" class="form-select" id="position" required>
+            <option value="">Select Position</option>
+            <option each="position,status : ${positions}"
+                    text="${position.getPositionName()}" value="${position.getPositionId()}">
+            </option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label for="educationDegree">Education Degree</label>
+          <select  field="*{educationDegree}" name="educationDegree" class="form-select" required
+                  id="educationDegree">
+            <option value="">Select Education Degree</option>
+            <option  each="educationDegree,status : ${educationDegrees}"
+                     text="${educationDegree.getEducationDegreeName()}"
+                    value="${educationDegree.getEducationDegreeId()}">
+            </option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label for="division">Division</label>
+          <select field="*{division}" name="division" class="form-select" id="division" required>
+            <option value="">Select Division</option>
+            <option  each="division,status : ${divisions}"
+                     text="${division.getDivisionName()}"  value="${division.getDivisionId()}">
+            </option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label for="employeeBirthday" class="form-label">Employee Birthday</label>
+          <input type="date" name="employeeBirthday" class="form-control" id="employeeBirthday"
+                  field="*{employeeBirthday}">
+          <p style="color: red"  if="${#fields.hasErrors('employeeBirthday')}"
+              errors="*{employeeBirthday}"></p>
+        </div>
+        <div class="mb-3">
+          <label for="employeeIdCard" class="form-label">Employee Id Card</label>
+          <input type="text" name="employeeIdCard" class="form-control" id="employeeIdCard"
+                  field="*{employeeIdCard}">
+          <p style="color: red"  if="${#fields.hasErrors('employeeIdCard')}"
+              errors="*{employeeIdCard}"></p>
+        </div>
+        <div class="mb-3">
+          <label for="employeeSalary" class="form-label">Employee Salary</label>
+          <input type="text" name="employeeSalary" class="form-control" id="employeeSalary"
+                  field="*{employeeSalary}">
+          <p style="color: red"  if="${#fields.hasErrors('employeeSalary')}"
+              errors="*{employeeSalary}"></p>
+        </div>
+        <div class="mb-3">
+          <label for="employeePhone" class="form-label">Employee Phone</label>
+          <input type="text" name="employeePhone" class="form-control" id="employeePhone"
+                  field="*{employeePhone}">
+          <p style="color: red"  if="${#fields.hasErrors('employeePhone')}"
+              errors="*{employeePhone}"></p>
+        </div>
+        <div class="mb-3">
+          <label for="employeeEmail" class="form-label">Employee Email</label>
+          <input type="email" name="employeeEmail" class="form-control" id="employeeEmail"
+                  field="*{employeeEmail}">
+          <p style="color: red"  if="${#fields.hasErrors('employeeEmail')}"
+              errors="*{employeeEmail}"></p>
+        </div>
+        <div class="mb-3">
+          <label for="employeeAddress" class="form-label">Employee Address</label>
+          <input type="text" name="employeeAddress" class="form-control" id="employeeAddress"
+                  field="*{employeeAddress}">
+          <p style="color: red"  if="${#fields.hasErrors('employeeAddress')}"
+              errors="*{employeeAddress}"></p>
+        </div>
+        <button type="submit" class="btn btn-primary">Create Employee</button>
+      </form>
+    </div>
+    <div class="col-lg-3"></div>
+  </div>
+</div>
