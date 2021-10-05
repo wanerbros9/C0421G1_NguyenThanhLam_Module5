@@ -1,14 +1,21 @@
 <div class="container-fluid" style="padding-bottom: 100px; padding-top: 30px">
   <div class="row">
-    <div class="col-lg-8">
+    <div class="col-lg-4">
       <h3>
-        Employee List
+        Customer List
       </h3>
     </div>
+    <div class="col-lg-4" align="center" style="color: red;">
+      <div class="notify">
+        <div if="${msg}">
+          <span text="${msg}"></span>
+        </div>
+      </div>
+    </div>
     <div class="col-lg-4">
-      <form class="d-flex" method="post" action="">
+      <form class="d-flex" action="@{/customer/list}">
         <input class="form-control me-2" style="width: 50%" type="text" placeholder="Search" aria-label="Search"
-               name="name">
+               name="name" value="${name}">
         <button class="btn btn-outline-dark" type="submit">Search</button>
       </form>
     </div>
@@ -20,33 +27,31 @@
         <tr align="center">
           <th scope="col">STT</th>
           <th scope="col">Name</th>
+          <th scope="col">Customer Code</th>
+          <th scope="col">Gender</th>
           <th scope="col">Birth Day</th>
           <th scope="col">Id Card</th>
-          <th scope="col">Salary</th>
+          <th scope="col">Customer Type</th>
           <th scope="col">Phone</th>
           <th scope="col">Email</th>
           <th scope="col">Address</th>
-          <th scope="col">Position</th>
-          <th scope="col">Education Degree</th>
-          <th scope="col">Division</th>
           <th scope="col" colspan="2">Action</th>
         </tr>
         </thead>
         <tbody>
-        <tr *ngFor="let employee of employeeList; let i = index" align="center">
+        <tr *ngFor="let customer of customerList; let i = index" align="center">
           <td>{{i + 1}}</td>
-          <td>{{employee.employeeName}}</td>
-          <td>{{employee.employeeBirthday}}</td>
-          <td>{{employee.employeeIdCard}}</td>
-          <td>{{employee.employeeSalary}}</td>
-          <td>{{employee.employeePhone}}</td>
-          <td>{{employee.employeeEmail}}</td>
-          <td>{{employee.employeeAddress}}</td>
-          <td>{{employee.employeePosition.positionName}}</td>
-          <td>{{employee.employeeEducationDegree.educationDegreeName}}</td>
-          <td>{{employee.employeeDivision.divisionName}}</td>
-
-          <td><a class="btn btn-warning">Edit</a>
+          <td>{{customer.customerName}}</td>
+          <td>{{customer.customerCode}}</td>
+          <td>{{customer.customerGender}}</td>
+          <td>{{customer.customerBirthday}}</td>
+          <td>{{customer.customerIdCard}}</td>
+          <td>{{customer.customerType.typeCustomerName}}</td>
+          <td>{{customer.customerPhone}}</td>
+          <td>{{customer.customerEmail}}</td>
+          <td>{{customer.customerAddress}}</td>
+          <td>
+            <a class="btn btn-warning" href="">Edit</a>
           </td>
           <td>
             <button type="button" data-bs-toggle="modal"
@@ -61,26 +66,9 @@
   </div>
   <div class="row">
     <div class="col-lg-12">
-      <a class="btn bg-success" style="color: white">
-        Add new employee
+      <a class="btn bg-success" style="color: white" href="">
+        Add new customer
       </a>
-    </div>
-  </div>
-  <nav aria-label="Page navigation example">
-    <ul class="pagination justify-content-center">
-      <li class="page-item">
-        <a class="page-link" href="" tabindex="-1" aria-disabled="true">Previous</a>
-      </li>
-      <li class="page-item">
-        <a class="page-link" href="">Next</a>
-      </li>
-    </ul>
-  </nav>
-</div>
-<div class="row">
-  <div class="col-lg-12">
-    <div align="center">
-      <span></span>/<span></span>
     </div>
   </div>
 </div>
@@ -91,16 +79,16 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Delete Employee</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Delete Customer</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal"
                 aria-label="Close"></button>
       </div>
       <div class="modal-body">
         Do you want to delete ?
       </div>
-      <form method="post" action="/employee/delete">
+      <form method="post" action="">
         <div class="modal-footer">
-          <input type="hidden" name="id" id="employeeId">
+          <input type="hidden" name="id" id="customerId">
           <input type="hidden" name="action" value="delete">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
             Close

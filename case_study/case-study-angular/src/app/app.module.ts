@@ -8,6 +8,7 @@ import { EditEmployeeComponent } from './component/employee/edit-employee/edit-e
 import { ListServiceComponent } from './component/service/list-service/list-service.component';
 import { CreateServiceComponent } from './component/service/create-service/create-service.component';
 import { EditServiceComponent } from './component/service/edit-service/edit-service.component';
+import { ListCustomerComponent } from './component/customer/list-customer/list-customer.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { EditServiceComponent } from './component/service/edit-service/edit-serv
     EditEmployeeComponent,
     ListServiceComponent,
     CreateServiceComponent,
-    EditServiceComponent
+    EditServiceComponent,
+    ListCustomerComponent
   ],
   imports: [
     BrowserModule
