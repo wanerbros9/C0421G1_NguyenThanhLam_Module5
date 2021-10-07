@@ -8,6 +8,8 @@ import {ProductListComponent} from './product/product-list/product-list.componen
 import {ProductCreateComponent} from './product/product-create/product-create.component';
 import {DictionaryPageComponent} from './dictionary-page/dictionary-page.component';
 import {DictionaryDetailComponent} from './dictionary-detail/dictionary-detail.component';
+import {ProductUpdateComponent} from './product/product-update/product-update.component';
+import {ProductDeleteComponent} from './product/product-delete/product-delete.component';
 
 const routes: Routes = [
   // {
@@ -21,12 +23,12 @@ const routes: Routes = [
   //   component: YoutubePlayerComponent
   // }]
   // },
-  {path: 'dictionary/list', component: DictionaryPageComponent},
-  {path: 'dictionary/detail/:word', component: DictionaryDetailComponent}
-  // {
-  //   path: 'product/create',
-  //   component: ProductCreateComponent
-  // }
+  // {path: 'dictionary/list', component: DictionaryPageComponent},
+  // {path: 'dictionary/detail/:word', component: DictionaryDetailComponent}
+  {path: 'product/create', component: ProductCreateComponent},
+  {path: 'product/list', component: ProductListComponent},
+  {path: 'product/update/:id', component: ProductUpdateComponent},
+  {path: 'product/delete/:id', component: ProductDeleteComponent}
 ];
 
 @NgModule({

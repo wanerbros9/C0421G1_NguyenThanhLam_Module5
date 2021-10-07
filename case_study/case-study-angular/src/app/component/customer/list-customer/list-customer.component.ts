@@ -1,6 +1,8 @@
 import {Component, OnInit} from '@angular/core';
-import {CustomerType} from "../customer-type";
-import {Customer} from "../customer";
+import {CustomerType} from "../models/customer-type";
+import {Customer} from "../models/customer";
+import {CustomerService} from "../service/customer.service";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-list-customer',
@@ -9,29 +11,19 @@ import {Customer} from "../customer";
 })
 export class ListCustomerComponent implements OnInit {
 
-  customerTypeList: CustomerType[] = [
-    {typeCustomerId: 1, typeCustomerName: "Diamond"},
-    {typeCustomerId: 2, typeCustomerName: "Gold"},
-    {typeCustomerId: 3, typeCustomerName: "Silver"},
-    {typeCustomerId: 4, typeCustomerName: "Member"}
-  ]
+  customers: Customer[];
 
-  customerList: Customer[] = [
-    {
-      customerId: 1,
-      customerCode: "KH1291",
-      customerType: this.customerTypeList[1],
-      customerName: "Lam",
-      customerBirthday: "16-10-1998",
-      customerGender: "Male",
-      customerIdCard: "201757954",
-      customerPhone: "0825161098",
-      customerEmail: "lam@gmail.com",
-      customerAddress: "New York"
-    }
-  ]
+  constructor(private customerService: CustomerService,
+              private router: Router) {
+    this.customerService.findAll().subscribe(next => {
+      this.customers = next;
+      console.log(this.customers);
+    }, error => {
 
-  constructor() {
+    }, () => {
+
+    });
+    console.log(this.customers);
   }
 
   ngOnInit(): void {

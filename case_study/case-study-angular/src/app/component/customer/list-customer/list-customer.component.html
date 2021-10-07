@@ -13,7 +13,7 @@
       </div>
     </div>
     <div class="col-lg-4">
-      <form class="d-flex" action="@{/customer/list}">
+      <form class="d-flex" action="">
         <input class="form-control me-2" style="width: 50%" type="text" placeholder="Search" aria-label="Search"
                name="name" value="${name}">
         <button class="btn btn-outline-dark" type="submit">Search</button>
@@ -39,14 +39,14 @@
         </tr>
         </thead>
         <tbody>
-        <tr *ngFor="let customer of customerList; let i = index" align="center">
+        <tr *ngFor="let customer of customers; let i = index" align="center">
           <td>{{i + 1}}</td>
           <td>{{customer.customerName}}</td>
           <td>{{customer.customerCode}}</td>
           <td>{{customer.customerGender}}</td>
           <td>{{customer.customerBirthday}}</td>
           <td>{{customer.customerIdCard}}</td>
-          <td>{{customer.customerType.typeCustomerName}}</td>
+          <td>{{customer.customerType.customerTypeName}}</td>
           <td>{{customer.customerPhone}}</td>
           <td>{{customer.customerEmail}}</td>
           <td>{{customer.customerAddress}}</td>
