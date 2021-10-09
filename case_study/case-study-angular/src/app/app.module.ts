@@ -16,9 +16,10 @@ import {CommonModule} from "@angular/common";
 import { CreateCustomerComponent } from './component/customer/create-customer/create-customer.component';
 import {ReactiveFormsModule} from "@angular/forms";
 import {FormsModule} from "@angular/forms";
-import { DeleteCustomerComponent } from './component/customer/delete-customer/delete-customer.component';
+// import { DeleteCustomerComponent } from './component/customer/delete-customer/delete-customer.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatSliderModule} from "@angular/material/slider";
+import { EditCustomerComponent } from './component/customer/edit-customer/edit-customer.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import {MatSliderModule} from "@angular/material/slider";
     EditServiceComponent,
     ListCustomerComponent,
     CreateCustomerComponent,
-    DeleteCustomerComponent
+    // DeleteCustomerComponent,
+    EditCustomerComponent
   ],
   imports: [
     BrowserModule,

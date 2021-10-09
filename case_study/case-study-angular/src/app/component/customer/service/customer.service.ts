@@ -22,7 +22,16 @@ export class CustomerService {
     return this.httpClient.post(this.api_url_customer, customer);
   }
 
-  findByName(employeeName: String | null): Observable<Employee | any> {
-    return this.httpClient.get(this.api_url_customer + "?name" + employeeName)
+  findByName(customerName: String | null): Observable<Customer | any> {
+    return this.httpClient.get(this.api_url_customer + "/" + customerName)
   }
+
+  findById(id: number): Observable<Customer | any> {
+    return this.httpClient.get(this.api_url_customer + "/" + id)
+  }
+
+  update(id: number, customer: Customer): Observable<Customer | any> {
+    return this.httpClient.put(this.api_url_customer + "/" + id, customer)
+  }
+
 }

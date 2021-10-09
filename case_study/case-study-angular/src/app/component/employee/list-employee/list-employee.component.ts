@@ -4,6 +4,7 @@ import {EducationDegree} from "../model/education-degree";
 import {Position} from "../model/position";
 import {Employee} from "../model/employee";
 import {EmployeeService} from "../service/employee.service";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-list-employee',
@@ -12,9 +13,19 @@ import {EmployeeService} from "../service/employee.service";
 })
 export class ListEmployeeComponent implements OnInit {
 
-  employeeList: Employee[] = [];
+  employees: Employee[];
 
-  constructor(private employeeService: EmployeeService) {
+  constructor(private employeeService: EmployeeService,
+              private router: Router) {
+    this.employeeService.findAll().subscribe(next => {
+      this.employees = next;
+      console.log(this.employees);
+    }, error => {
+
+    }, () => {
+
+    });
+    console.log(this.employees)
   }
 
   ngOnInit(): void {

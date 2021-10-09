@@ -3,9 +3,9 @@ import {Division} from "./division";
 import {Position} from "./position";
 
 export interface Employee {
-  employeeId: number;
+  id: number;
   employeeName: string;
-  employeePosition: Position
+  employeePosition: Position;
   employeeEducationDegree: EducationDegree;
   employeeDivision: Division;
   employeeBirthday: string;

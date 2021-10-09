@@ -1,17 +1,19 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import {Division} from "../model/division";
+import {HttpClient} from "@angular/common/http";
+import {Observable} from "rxjs";
 
 @Injectable({
   providedIn: 'root'
 })
 export class DivisionService {
 
-  divisionList: Division[] = [
-    {divisionId: 1, divisionName: "Sale-Marketing"},
-    {divisionId: 2, divisionName: "Administrative"},
-    {divisionId: 3, divisionName: "Serve"},
-    {divisionId: 4, divisionName: "Manage"}
-  ];
+  private api_url_division = "http://localhost:3000/divisons";
 
-  constructor() { }
+  constructor(private httpClient: HttpClient) {
+  }
+
+  findAllDivision(): Observable<Division[] | any> {
+    return this.httpClient.get(this.api_url_division);
+  }
 }

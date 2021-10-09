@@ -5,17 +5,10 @@
         Customer List
       </h3>
     </div>
-    <div class="col-lg-4" align="center" style="color: red;">
-      <div class="notify">
-        <div if="${msg}">
-          <span text="${msg}"></span>
-        </div>
-      </div>
-    </div>
     <div class="col-lg-4">
       <form class="d-flex" action="">
         <input class="form-control me-2" style="width: 50%" type="text" placeholder="Search" aria-label="Search"
-               name="name" value="${name}">
+               name="name" value="">
         <button class="btn btn-outline-dark" type="submit">Search</button>
       </form>
     </div>
@@ -51,7 +44,7 @@
           <td>{{customer.customerEmail}}</td>
           <td>{{customer.customerAddress}}</td>
           <td>
-            <a class="btn btn-warning" href="">Edit</a>
+            <a class="btn btn-warning" [routerLink]="['/customer/edit',customer.id]">Edit</a>
           </td>
           <td>
             <button type="button" data-bs-toggle="modal"
@@ -66,7 +59,7 @@
   </div>
   <div class="row">
     <div class="col-lg-12">
-      <a class="btn bg-success" style="color: white" href="">
+      <a class="btn bg-success" style="color: white" routerLink="/customer/create">
         Add new customer
       </a>
     </div>

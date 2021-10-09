@@ -1,17 +1,20 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import {EducationDegree} from "../model/education-degree";
+import {HttpClient} from "@angular/common/http";
+import {Observable} from "rxjs";
+import {Division} from "../model/division";
 
 @Injectable({
   providedIn: 'root'
 })
 export class EducationDegreeService {
 
-  educationDegreeList: EducationDegree[] = [
-    {educationDegreeId: 1, educationDegreeName: "Intermediate"},
-    {educationDegreeId: 2, educationDegreeName: "College"},
-    {educationDegreeId: 3, educationDegreeName: "University"},
-    {educationDegreeId: 4, educationDegreeName: "Post Graduated"}
-  ];
+  private api_url_educationDegree = "http://localhost:3000/educationDegrees";
 
-  constructor() { }
+  constructor(private httpClient: HttpClient) {
+  }
+
+  findAllEducationDegree(): Observable<EducationDegree[] | any> {
+    return this.httpClient.get(this.api_url_educationDegree);
+  }
 }

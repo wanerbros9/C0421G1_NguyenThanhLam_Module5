@@ -1,23 +1,23 @@
 {
   "customerTypes": [
     {
-      "customerTypeId": 1,
+      "id": 1,
       "customerTypeName": "Diamond"
     },
     {
-      "customerTypeId": 2,
+      "id": 2,
       "customerTypeName": "Platinum"
     },
     {
-      "customerTypeId": 3,
+      "id": 3,
       "customerTypeName": "Gold"
     },
     {
-      "customerTypeId": 4,
+      "id": 4,
       "customerTypeName": "Silver"
     },
     {
-      "customerTypeId": 5,
+      "id": 5,
       "customerTypeName": "Member"
     }
   ],
@@ -27,15 +27,15 @@
       "customerName": "Nguyen Tien Danh",
       "customerGender": "Male",
       "customerIdCard": "123456781",
-      "customerPhone": "0901111111",
+      "customerPhone": "090111111",
       "customerType": {
-        "customerTypeId": 1,
+        "id": 1,
         "customerTypeName": "Diamond"
       },
       "customerBirthday": "2001-01-22",
       "customerEmail": "ndanh@gmail.com",
-      "customerAddress": "Da Nang",
-      "customerId": 1
+      "customerAddress": "Hue",
+      "id": 1
     },
     {
       "customerCode": "KH-0002",
@@ -44,13 +44,13 @@
       "customerIdCard": "123123123112",
       "customerPhone": "0901231232",
       "customerType": {
-        "customerTypeId": 2,
+        "id": 2,
         "customerTypeName": "Platinum"
       },
       "customerBirthday": "2021-07-03",
       "customerEmail": "qan@codegym.vn",
       "customerAddress": "Vung Tau",
-      "customerId": 2
+      "id": 2
     },
     {
       "customerCode": "KH-0003",
@@ -59,13 +59,13 @@
       "customerIdCard": "201482948",
       "customerPhone": "0903928172",
       "customerType": {
-        "customerTypeId": 3,
+        "id": 3,
         "customerTypeName": "Gold"
       },
       "customerBirthday": "2021-07-03",
       "customerEmail": "min@codegym.vn",
       "customerAddress": "Hue",
-      "customerId": 3
+      "id": 3
     },
     {
       "customerCode": "KH-0004",
@@ -74,91 +74,91 @@
       "customerIdCard": "192740281",
       "customerPhone": "0909217320",
       "customerType": {
-        "customerTypeId": 4,
+        "id": 4,
         "customerTypeName": "Silver"
       },
       "customerBirthday": "2021-07-03",
       "customerEmail": "lam@codegym.vn",
       "customerAddress": "Ha Noi",
-      "customerId": 4
+      "id": 4
     }
   ],
   "educationDegrees": [
     {
-      "educationDegreeId": 1,
+      "id": 1,
       "educationDegreeName": "Lễ tân"
     },
     {
-      "educationDegreeId": 2,
+      "id": 2,
       "educationDegreeName": "Phục vụ"
     },
     {
-      "educationDegreeId": 3,
+      "id": 3,
       "educationDegreeName": "Chuyên viên"
     },
     {
-      "educationDegreeId": 4,
+      "id": 4,
       "educationDegreeName": "Giám sát"
     },
     {
-      "educationDegreeId": 5,
+      "id": 5,
       "educationDegreeName": "Quản lý"
     },
     {
-      "educationDegreeId": 6,
+      "id": 6,
       "educationDegreeName": "Giám đốc"
     }
   ],
   "divisions": [
     {
-      "divisionId": 1,
+      "id": 1,
       "divisionName": "Sale marketing"
     },
     {
-      "divisionId": 2,
+      "id": 2,
       "divisionName": "Hành chính"
     },
     {
-      "divisionId": 3,
+      "id": 3,
       "divisionName": "Phục vụ"
     },
     {
-      "divisionId": 4,
+      "id": 4,
       "divisionName": "Quản lý"
     }
   ],
   "positions": [
     {
-      "positionId": 1,
+      "id": 1,
       "positionName": "Trung cấp"
     },
     {
-      "positionId": 2,
+      "id": 2,
       "positionName": "Cao đẳng"
     },
     {
-      "positionId": 3,
+      "id": 3,
       "positionName": "Đại học"
     },
     {
-      "positionId": 4,
+      "id": 4,
       "positionName": "Sau đại học"
     }
   ],
   "employees": [
     {
-      "employeeId": 1,
+      "id": 1,
       "employeeName": "HaiTT",
       "position": {
-        "positionId": 1,
+        "id": 1,
         "positionName": "Trung cấp"
       },
       "division": {
-        "divisionId": 1,
+        "id": 1,
         "divisionName": "Sale marketing"
       },
       "educationDegree": {
-        "educationDegreeId": 1,
+        "id": 1,
         "educationDegreeName": "Lễ tân"
       },
       "employeeEmail": "HaiTT1@codegym.vn",
@@ -169,18 +169,18 @@
       "employeeSalary": "7000000"
     },
     {
-      "employeeId": 2,
+      "id": 2,
       "employeeName": "TrungDP",
       "position": {
-        "positionId": 2,
+        "id": 2,
         "positionName": "Cao đẳng"
       },
       "division": {
-        "divisionId": 3,
+        "id": 3,
         "divisionName": "Phục vụ"
       },
       "educationDegree": {
-        "educationDegreeId": 5,
+        "id": 5,
         "educationDegreeName": "Quản lý"
       },
       "employeeEmail": "chien1@codegym.vn",

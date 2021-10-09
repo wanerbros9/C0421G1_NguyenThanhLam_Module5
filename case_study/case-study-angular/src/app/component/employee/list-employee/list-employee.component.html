@@ -33,7 +33,7 @@
         </tr>
         </thead>
         <tbody>
-        <tr *ngFor="let employee of employeeList; let i = index" align="center">
+        <tr *ngFor="let employee of employees; let i = index" align="center">
           <td>{{i + 1}}</td>
           <td>{{employee.employeeName}}</td>
           <td>{{employee.employeeBirthday}}</td>
@@ -45,8 +45,8 @@
           <td>{{employee.employeePosition.positionName}}</td>
           <td>{{employee.employeeEducationDegree.educationDegreeName}}</td>
           <td>{{employee.employeeDivision.divisionName}}</td>
-
-          <td><a class="btn btn-warning">Edit</a>
+          <td>
+            <a class="btn btn-warning">Edit</a>
           </td>
           <td>
             <button type="button" data-bs-toggle="modal"
@@ -66,48 +66,31 @@
       </a>
     </div>
   </div>
-  <nav aria-label="Page navigation example">
-    <ul class="pagination justify-content-center">
-      <li class="page-item">
-        <a class="page-link" href="" tabindex="-1" aria-disabled="true">Previous</a>
-      </li>
-      <li class="page-item">
-        <a class="page-link" href="">Next</a>
-      </li>
-    </ul>
-  </nav>
-</div>
-<div class="row">
-  <div class="col-lg-12">
-    <div align="center">
-      <span></span>/<span></span>
-    </div>
-  </div>
-</div>
 
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-     aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Delete Employee</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"
-                aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        Do you want to delete ?
-      </div>
-      <form method="post" action="/employee/delete">
-        <div class="modal-footer">
-          <input type="hidden" name="id" id="employeeId">
-          <input type="hidden" name="action" value="delete">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
-            Close
-          </button>
-          <button type="submit" class="btn btn-danger">Yes</button>
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+       aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Delete Employee</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"
+                  aria-label="Close"></button>
         </div>
-      </form>
+        <div class="modal-body">
+          Do you want to delete ?
+        </div>
+        <form method="post" action="">
+          <div class="modal-footer">
+            <input type="hidden" name="id" id="employeeId">
+            <input type="hidden" name="action" value="delete">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+              Close
+            </button>
+            <button type="submit" class="btn btn-danger">Yes</button>
+          </div>
+        </form>
+      </div>
     </div>
   </div>
 </div>
