@@ -27,7 +27,7 @@
       "customerName": "Nguyen Tien Danh",
       "customerGender": "Male",
       "customerIdCard": "123456781",
-      "customerPhone": "090111111",
+      "customerPhone": "090111112",
       "customerType": {
         "id": 1,
         "customerTypeName": "Diamond"
@@ -149,15 +149,15 @@
     {
       "id": 1,
       "employeeName": "HaiTT",
-      "position": {
+      "employeePosition": {
         "id": 1,
         "positionName": "Trung cấp"
       },
-      "division": {
+      "employeeDivision": {
         "id": 1,
         "divisionName": "Sale marketing"
       },
-      "educationDegree": {
+      "employeeEducationDegree": {
         "id": 1,
         "educationDegreeName": "Lễ tân"
       },
@@ -171,15 +171,15 @@
     {
       "id": 2,
       "employeeName": "TrungDP",
-      "position": {
+      "employeePosition": {
         "id": 2,
         "positionName": "Cao đẳng"
       },
-      "division": {
+      "employeeDivision": {
         "id": 3,
         "divisionName": "Phục vụ"
       },
-      "educationDegree": {
+      "employeeEducationDegree": {
         "id": 5,
         "educationDegreeName": "Quản lý"
       },

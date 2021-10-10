@@ -34,4 +34,8 @@ export class CustomerService {
     return this.httpClient.put(this.api_url_customer + "/" + id, customer)
   }
 
+  searchByName(customerName: String | null): Observable<Customer | any> {
+    return this.httpClient.get(this.api_url_customer + "?q" + customerName)
+  }
+
 }

@@ -1,0 +1,12 @@
+<div *ngIf="dictionaryDetail; else emptyStudent">
+  <div>
+    Word:{{dictionaryDetail.word}}
+  </div>
+  <div>
+    Mean:{{dictionaryDetail.mean}}
+  </div>
+</div>
+
+<ng-template #emptyStudent>
+  <p style="color: red">No data</p>
+</ng-template>

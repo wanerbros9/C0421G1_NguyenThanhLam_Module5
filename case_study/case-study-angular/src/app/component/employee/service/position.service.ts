@@ -2,7 +2,6 @@ import {Injectable} from '@angular/core';
 import {Position} from "../model/position";
 import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
-import {EducationDegree} from "../model/education-degree";
 
 @Injectable({
   providedIn: 'root'

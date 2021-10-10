@@ -1,12 +1,20 @@
-<h2>Edit Customer</h2>
-<button routerLink="/customer/list" class="btn btn-primary">Back to customer</button>
-<div class="container">
+<div class="container-fluid">
   <div class="row">
-    <div class="col-2"></div>
-    <div class="col-8">
+    <div class="col-lg-12" align="center">
+      <h2>Edit Customer</h2>
+      <button routerLink="/customer/list" class="btn btn-primary">Back to customer</button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-3"></div>
+    <div class="col-lg-6">
       <div class="p-md-3">
         <form [formGroup]="customerForm" (ngSubmit)="update(id)">
           <div class="row g-3">
+            <div class="col" hidden>
+              <input type="text" class="form-control"
+                     formControlName="id">
+            </div>
             <div class="col">
               <label>Customer Code</label>
               <input type="text" class="form-control" placeholder="Customer Code" aria-label="Customer Code"
@@ -46,18 +54,34 @@
             <!--            </div>-->
           </div>
           <div class="mb-3">
-            <label class="form-label">Gender</label>
-            <select class="form-select" formControlName="customerGender">
-              <option>Select</option>
-              <option value="male">Male</option>
-              <option value="female">Female</option>
-              <option value="lgbt">LGBT</option>
-            </select>
-            <!--            <div class="alert-danger" *ngFor="let va of validationMessage.customerGender" [hidden]="va.valid">-->
-            <!--              <div-->
-            <!--                *ngIf="customerForm.get('gender').hasError(va.type)&& customerForm.get('gender').dirty">{{va.message}}</div>-->
-            <!--            </div>-->
+            <label> Customer Gender</label><br><br>
+            <div class="form-check-inline mb-3">
+              <input class="form-check-input" type="radio" id="male" formControlName="customerGender"
+                     value="Male">
+              <label class="form-check-label" for="male">
+                Male
+              </label>
+            </div>
+            <div class="form-check-inline mb-3">
+              <input class="form-check-input" type="radio" id="female" formControlName="customerGender"
+                     value="Female">
+              <label class="form-check-label" for="female">
+                Female
+              </label>
+            </div>
+            <div class="form-check-inline mb-3">
+              <input class="form-check-input" type="radio" id="other" formControlName="customerGender"
+                     value="Other">
+              <label class="form-check-label" for="other">
+                Other
+              </label>
+            </div>
           </div>
+          <!--            <div class="alert-danger" *ngFor="let va of validationMessage.customerGender" [hidden]="va.valid">-->
+          <!--              <div-->
+          <!--                *ngIf="customerForm.get('gender').hasError(va.type)&& customerForm.get('gender').dirty">{{va.message}}</div>-->
+          <!--            </div>-->
+
           <div class="mb-3">
             <label class="form-label">ID Card</label>
             <input type="text" class="form-control" placeholder="ID Card" aria-label="Customer ID Card"
@@ -100,8 +124,7 @@
           </div>
         </form>
       </div>
-
     </div>
-    <div class="col-2"></div>
+    <div class="col-lg-3"></div>
   </div>
 </div>

@@ -8,7 +8,7 @@ import {Observable} from "rxjs";
 })
 export class DivisionService {
 
-  private api_url_division = "http://localhost:3000/divisons";
+  private api_url_division = "http://localhost:3000/divisions";
 
   constructor(private httpClient: HttpClient) {
   }

@@ -1,0 +1,18 @@
+<table class="table" border="1">
+  <thead>
+  <tr>
+    <th>Word</th>
+    <th>Mean</th>
+    <th>Detail</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let word of dictionaryList">
+    <td>{{word.word}}</td>
+    <td>{{word.mean}}</td>
+    <td>
+      <a [routerLink]="['/dictionary/detail', word.word]">Detail</a>
+    </td>
+  </tr>
+  </tbody>
+</table>

@@ -24,6 +24,8 @@ export class ListCustomerComponent implements OnInit {
 
     });
     console.log(this.customers);
+
+
   }
 
   ngOnInit(): void {

@@ -46,7 +46,7 @@
           <td>{{employee.employeeEducationDegree.educationDegreeName}}</td>
           <td>{{employee.employeeDivision.divisionName}}</td>
           <td>
-            <a class="btn btn-warning">Edit</a>
+            <a class="btn btn-warning" [routerLink]="['/employee/edit', employee.id]">Edit</a>
           </td>
           <td>
             <button type="button" data-bs-toggle="modal"
@@ -61,7 +61,7 @@
   </div>
   <div class="row">
     <div class="col-lg-12">
-      <a class="btn bg-success" style="color: white">
+      <a class="btn bg-success" style="color: white" routerLink="/employee/create">
         Add new employee
       </a>
     </div>

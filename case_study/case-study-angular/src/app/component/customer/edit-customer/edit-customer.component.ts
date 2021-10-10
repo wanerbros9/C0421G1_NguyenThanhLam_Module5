@@ -16,7 +16,6 @@ export class EditCustomerComponent implements OnInit {
   customer: Customer;
   id: number;
   customerTypeList: CustomerType[];
-  customerGender: string
 
   validationMessage = {
     customerCode: [
@@ -55,6 +54,7 @@ export class EditCustomerComponent implements OnInit {
   }
 
   customerForm = new FormGroup({
+    id: new FormControl('', [Validators.required]),
     customerCode: new FormControl('', [Validators.required, Validators.pattern(/^KH-[0-9]{4}$/)]),
     customerName: new FormControl('', [Validators.required, Validators.minLength(5)]),
     customerGender: new FormControl('', [Validators.required]),
