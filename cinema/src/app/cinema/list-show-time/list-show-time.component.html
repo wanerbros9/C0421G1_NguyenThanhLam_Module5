@@ -1,0 +1,39 @@
+<div class="container-fluid">
+  <div class="row">
+    <table class="table">
+      <thead>
+      <tr align="center">
+        <th scope="col">No</th>
+        <th scope="col">Show Time Code</th>
+        <th scope="col">Movie Name</th>
+        <th scope="col">Showing Date</th>
+        <th scope="col">Ticket Amount</th>
+        <th scope="col">Action</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let item of showTimes; let i = index" align="center">
+        <td>{{i + 1}}</td>
+        <td>{{item.showTimeCode}}</td>
+        <td>{{item.movieNameShow.movieName}}</td>
+        <td>{{item.showDate}}</td>
+        <td>{{item.ticketAmount}}</td>
+        <td>
+          <button mat-raised-button type="button" (click)="deleteShowTime(item.id, item.showTimeCode)"
+                  data-bs-toggle="modal"
+                  class="btn btn-danger" data-bs-target="deleteModal">Delete
+          </button>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="row">
+    <div class="col-lg-12">
+      <a class="btn bg-success" style="color: white" routerLink="/showtime/create">
+        Add new show time
+      </a>
+    </div>
+  </div>
+</div>
+

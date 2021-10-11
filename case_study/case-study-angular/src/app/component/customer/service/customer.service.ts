@@ -34,6 +34,10 @@ export class CustomerService {
     return this.httpClient.put(this.api_url_customer + "/" + id, customer)
   }
 
+  delete(id: number): Observable<Customer | any> {
+    return this.httpClient.delete(this.api_url_customer + "/" + id);
+  }
+
   searchByName(customerName: String | null): Observable<Customer | any> {
     return this.httpClient.get(this.api_url_customer + "?q" + customerName)
   }

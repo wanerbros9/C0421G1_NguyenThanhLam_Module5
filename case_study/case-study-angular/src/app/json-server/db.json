@@ -68,18 +68,18 @@
       "id": 3
     },
     {
-      "customerCode": "KH-0004",
-      "customerName": "Nguyen Thanh Lam",
-      "customerGender": "Female",
-      "customerIdCard": "192740281",
-      "customerPhone": "0909217320",
+      "customerCode": "KH-0028",
       "customerType": {
-        "id": 4,
-        "customerTypeName": "Silver"
+        "id": 2,
+        "customerTypeName": "Platinum"
       },
-      "customerBirthday": "2021-07-03",
-      "customerEmail": "lam@codegym.vn",
-      "customerAddress": "Ha Noi",
+      "customerName": "Trung",
+      "customerBirthday": "2009-01-08",
+      "customerGender": "Male",
+      "customerIdCard": "123456789",
+      "customerPhone": "0901111111",
+      "customerEmail": "lam@gmail.com",
+      "customerAddress": "Da Nang",
       "id": 4
     }
   ],

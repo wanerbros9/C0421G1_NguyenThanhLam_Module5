@@ -6,8 +6,6 @@ import {FormControl, FormGroup, Validators} from "@angular/forms";
 import {CustomerType} from "../models/customer-type";
 import {CustomerTypeService} from "../service/customer-type.service";
 
-// import {CustomerTypeService} from "../service/customer-type.service";
-
 @Component({
   selector: 'app-create-customer',
   templateUrl: './create-customer.component.html',
@@ -21,15 +19,15 @@ export class CreateCustomerComponent implements OnInit {
 
   constructor(private customerService: CustomerService, private customerTypeService: CustomerTypeService, private router: Router) {
     this.customerForm = new FormGroup({
-      customerId: new FormControl("", [Validators.required]),
-      customerCode: new FormControl("", [Validators.required]),
+      // customerId: new FormControl(""),
+      customerCode: new FormControl("", [Validators.required, Validators.pattern(/^KH-[0-9]{4}$/)]),
       customerType: new FormControl("", [Validators.required]),
-      customerName: new FormControl("", [Validators.required]),
-      customerBirthday: new FormControl("", [Validators.required]),
+      customerName: new FormControl("", [Validators.required, Validators.minLength(5)]),
+      customerBirthday: new FormControl(""),
       customerGender: new FormControl("", [Validators.required]),
-      customerIdCard: new FormControl("", [Validators.required]),
-      customerPhone: new FormControl("", [Validators.required]),
-      customerEmail: new FormControl("", [Validators.required]),
+      customerIdCard: new FormControl("", [Validators.required, Validators.pattern(/^([0-9]{9}|[0-9]{12})$/)]),
+      customerPhone: new FormControl("", [Validators.required, Validators.pattern(/^(090|091|(\(84\)\+90)|(\(84\)\+91))[0-9]{7}$/)]),
+      customerEmail: new FormControl("", [Validators.required, Validators.email]),
       customerAddress: new FormControl("", [Validators.required])
     });
 
@@ -45,17 +43,44 @@ export class CreateCustomerComponent implements OnInit {
   }
 
   createCustomerReactiveForm() {
-    console.log(this.customerForm)
+    console.log(this.customerForm.value)
     if (this.customerForm.valid) {
       this.customerService.createCustomer(this.customerForm.value).subscribe(next => {
-        this.router.navigateByUrl("/customer/list")
+        this.router.navigateByUrl("/customer/list");
       });
     }
   }
 
-  submit(){
-    const value = this.customerForm.value;
-    console.log(value)
+  validationMessage = {
+    customerCode: [
+      {type: 'required', message: 'Not null'},
+      {type: 'pattern', message: '(KH-XXXX) x is number'},
+    ],
+    customerName: [
+      {type: 'required', message: 'Not null'},
+      {type: 'minlength', message: 'length must be greater than 5'},
+    ],
+    customerGender: [
+      {type: 'required', message: 'Not null'},
+    ],
+    customerIdCard: [
+      {type: 'required', message: 'Not null'},
+      {type: 'pattern', message: 'Invalid, id card must contain 9 or 12 number'},
+    ],
+    customerPhone: [
+      {type: 'required', message: 'Not null'},
+      {type: 'pattern', message: 'Invalid, 090xxxxxxx or 091xxxxxxx'},
+    ],
+    customerType: [
+      {type: 'required', message: 'Not null'},
+    ],
+    customerEmail: [
+      {type: 'required', message: 'Not null'},
+      {type: 'pattern', message: 'invalid'},
+    ],
+    customerAddress: [
+      {type: 'required', message: 'Not null'},
+    ],
   }
 
   ngOnInit(): void {

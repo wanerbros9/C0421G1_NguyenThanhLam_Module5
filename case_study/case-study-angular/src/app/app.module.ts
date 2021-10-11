@@ -13,13 +13,21 @@ import {AppRoutingModule} from './app-routing.module';
 import {HttpClient, HttpClientModule} from "@angular/common/http";
 import {RouterModule} from "@angular/router";
 import {CommonModule} from "@angular/common";
-import { CreateCustomerComponent } from './component/customer/create-customer/create-customer.component';
+import {CreateCustomerComponent} from './component/customer/create-customer/create-customer.component';
 import {ReactiveFormsModule} from "@angular/forms";
 import {FormsModule} from "@angular/forms";
 // import { DeleteCustomerComponent } from './component/customer/delete-customer/delete-customer.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatSliderModule} from "@angular/material/slider";
-import { EditCustomerComponent } from './component/customer/edit-customer/edit-customer.component';
+import {EditCustomerComponent} from './component/customer/edit-customer/edit-customer.component';
+import {MatDialogModule} from "@angular/material/dialog";
+import {DeleteCustomerComponent} from "./component/customer/delete-customer/delete-customer.component";
+import {MatButtonModule} from "@angular/material/button";
+import {MatTableModule} from "@angular/material/table";
+import {MatPaginatorModule} from "@angular/material/paginator";
+import {Ng2SearchPipeModule} from "ng2-search-filter";
+import {Ng2OrderModule} from "ng2-order-pipe";
+import {NgxPaginationModule} from "ngx-pagination";
 
 @NgModule({
   declarations: [
@@ -32,9 +40,10 @@ import { EditCustomerComponent } from './component/customer/edit-customer/edit-c
     EditServiceComponent,
     ListCustomerComponent,
     CreateCustomerComponent,
-    // DeleteCustomerComponent,
+    DeleteCustomerComponent,
     EditCustomerComponent
   ],
+  entryComponents: [DeleteCustomerComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -44,7 +53,13 @@ import { EditCustomerComponent } from './component/customer/edit-customer/edit-c
     ReactiveFormsModule,
     FormsModule,
     BrowserAnimationsModule,
-    // MatSliderModule
+    MatDialogModule,
+    MatButtonModule,
+    MatTableModule,
+    MatPaginatorModule,
+    Ng2SearchPipeModule,
+    Ng2OrderModule,
+    NgxPaginationModule
   ],
   providers: [],
   bootstrap: [AppComponent]

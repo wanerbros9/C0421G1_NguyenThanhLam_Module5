@@ -12,17 +12,17 @@
         <form [formGroup]="customerForm" (ngSubmit)="update(id)">
           <div class="row g-3">
             <div class="col" hidden>
-              <input type="text" class="form-control"
+              <input type="text"
                      formControlName="id">
             </div>
             <div class="col">
               <label>Customer Code</label>
-              <input type="text" class="form-control" placeholder="Customer Code" aria-label="Customer Code"
+              <input type="text" class="form-control" aria-label="Customer Code"
                      formControlName="customerCode">
-              <!--              <div class="alert-danger" *ngFor="let va of validationMessage.customerCode" [hidden]="va.valid">-->
-              <!--                <div-->
-              <!--                  *ngIf="customerForm.get('code').hasError(va.type)&& customerForm.get('code').dirty">{{va.message}}</div>-->
-              <!--              </div>-->
+<!--              <div class="alert-danger" *ngFor="let va of validationMessage.customerCode" [hidden]="va.valid">-->
+<!--                <div-->
+<!--                  *ngIf="customerForm.get('code').hasError(va.type)&& customerForm.get('code').dirty">{{va.message}}</div>-->
+<!--              </div>-->
             </div>
             <div class="col">
               <label>Name</label>

@@ -5,48 +5,101 @@
   <div class="row" style="padding-bottom: 10px">
     <div class="col-lg-3"></div>
     <div class="col-lg-6">
-      <form [formGroup]="customerForm" (ngSubmit)="submit()">
-        <div class="mb-3">
-          <label for="customerId" class="form-label">Customer Id</label>
-          <input type="text" formControlName="customerId" class="form-control" id="customerId">
-        </div>
+      <form [formGroup]="customerForm" (ngSubmit)="createCustomerReactiveForm()">
         <div class="mb-3">
           <label for="customerCode" class="form-label">Customer Code</label>
           <input type="text" formControlName="customerCode" class="form-control" id="customerCode">
         </div>
+        <div class="alert-danger" *ngFor="let validator of validationMessage.customerCode" [hidden]="validator.valid"
+             style="background-color: white; color: red">
+          <div
+            *ngIf="customerForm.get('customerCode').hasError(validator.type)&& customerForm.get('customerCode').dirty">{{validator.message}}</div>
+        </div>
         <div class="mb-3">
           <label for="customerType" class="form-label">Customer Type</label>
-          <select  class="form-select" id="customerType" formControlName="customerType">
+          <select class="form-select" id="customerType" formControlName="customerType">
             <option *ngFor="let type of customerType" [ngValue]="type">{{type.customerTypeName}}</option>
           </select>
+        </div>
+        <div class="alert-danger" *ngFor="let validator of validationMessage.customerType" [hidden]="validator.valid"
+             style="background-color: white; color: red">
+          <div
+            *ngIf="customerForm.get('customerType').hasError(validator.type)&& customerForm.get('customerType').dirty">{{validator.message}}</div>
         </div>
         <div class="mb-3">
           <label for="customerName" class="form-label">Customer Name</label>
           <input type="text" formControlName="customerName" class="form-control" id="customerName">
         </div>
-        <div class="mb-3">
-          <label for="customerBirthday" class="form-label">Customer Birthday</label>
-          <input type="text" formControlName="customerBirthday" class="form-control" id="customerBirthday">
+        <div class="alert-danger" *ngFor="let validator of validationMessage.customerName" [hidden]="validator.valid"
+             style="background-color: white; color: red">
+          <div
+            *ngIf="customerForm.get('customerName').hasError(validator.type)&& customerForm.get('customerName').dirty">{{validator.message}}</div>
         </div>
         <div class="mb-3">
-          <label for="customerGender" class="form-label">Customer Gender</label>
-          <input type="text" formControlName="customerGender" class="form-control" id="customerGender">
+          <label for="customerBirthday" class="form-label">Customer Birthday</label>
+          <input type="date" formControlName="customerBirthday" class="form-control" id="customerBirthday">
+        </div>
+        <div class="form-check-inline mb-3">
+          <input class="form-check-input" type="radio" id="male" formControlName="customerGender"
+                 value="Male">
+          <label class="form-check-label" for="male">
+            Male
+          </label>
+        </div>
+        <div class="form-check-inline mb-3">
+          <input class="form-check-input" type="radio" id="female" formControlName="customerGender"
+                 value="Female">
+          <label class="form-check-label" for="female">
+            Female
+          </label>
+        </div>
+        <div class="form-check-inline mb-3">
+          <input class="form-check-input" type="radio" id="other" formControlName="customerGender"
+                 value="Other">
+          <label class="form-check-label" for="other">
+            Other
+          </label>
+        </div>
+        <div class="alert-danger" *ngFor="let validator of validationMessage.customerGender" [hidden]="validator.valid"
+             style="background-color: white; color: red">
+          <div
+            *ngIf="customerForm.get('customerGender').hasError(validator.type)&& customerForm.get('customerGender').dirty">{{validator.message}}</div>
         </div>
         <div class="mb-3">
           <label for="customerIdCard" class="form-label">Customer Id Card</label>
           <input type="text" formControlName="customerIdCard" class="form-control" id="customerIdCard">
         </div>
+        <div class="alert-danger" *ngFor="let validator of validationMessage.customerIdCard" [hidden]="validator.valid"
+             style="background-color: white; color: red">
+          <div
+            *ngIf="customerForm.get('customerIdCard').hasError(validator.type)&& customerForm.get('customerIdCard').dirty">{{validator.message}}</div>
+        </div>
         <div class="mb-3">
           <label for="customerPhone" class="form-label">Customer Phone</label>
           <input type="text" formControlName="customerPhone" class="form-control" id="customerPhone">
         </div>
+        <div class="alert-danger" *ngFor="let validator of validationMessage.customerPhone" [hidden]="validator.valid"
+             style="background-color: white; color: red">
+          <div
+            *ngIf="customerForm.get('customerPhone').hasError(validator.type)&& customerForm.get('customerPhone').dirty">{{validator.message}}</div>
+        </div>
         <div class="mb-3">
           <label for="customerEmail" class="form-label">Customer Email</label>
-          <input type="text" formControlName="customerEmail" class="form-control" id="customerEmail">
+          <input type="email" formControlName="customerEmail" class="form-control" id="customerEmail">
+        </div>
+        <div class="alert-danger" *ngFor="let validator of validationMessage.customerEmail" [hidden]="validator.valid"
+             style="background-color: white; color: red">
+          <div
+            *ngIf="customerForm.get('customerEmail').hasError(validator.type)&& customerForm.get('customerEmail').dirty">{{validator.message}}</div>
         </div>
         <div class="mb-3">
           <label for="customerAddress" class="form-label">Customer Address</label>
           <input type="text" formControlName="customerAddress" class="form-control" id="customerAddress">
+        </div>
+        <div class="alert-danger" *ngFor="let validator of validationMessage.customerAddress" [hidden]="validator.valid"
+             style="background-color: white; color: red">
+          <div
+            *ngIf="customerForm.get('customerAddress').hasError(validator.type)&& customerForm.get('customerAddress').dirty">{{validator.message}}</div>
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
       </form>
