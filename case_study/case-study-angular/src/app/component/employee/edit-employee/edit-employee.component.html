@@ -40,10 +40,6 @@
               <option *ngFor="let type of positionList" [ngValue]="type"
                       [selected]="type.positionName == employeeForm.controls.employeePosition.value.positionName">{{type.positionName}}</option>
             </select>
-            <!--            <div class="alert-danger" *ngFor="let va of validationMessage.customerType" [hidden]="va.valid">-->
-            <!--              <div-->
-            <!--                *ngIf="customerForm.get('customerType').hasError(va.type)&& customerForm.get('customerType').dirty">{{va.message}}</div>-->
-            <!--            </div>-->
           </div>
           <div class="mb-3">
             <label class="form-label">Division:</label>

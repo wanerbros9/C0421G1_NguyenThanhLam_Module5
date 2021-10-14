@@ -1,0 +1,46 @@
+{
+  "carTypes": [
+    {
+      "id": 1,
+      "carTypeName": "Giường nằm"
+    },
+    {
+      "id": 2,
+      "carTypeName": "Ghế ngồi"
+    }
+  ],
+  "carStation": [
+    {
+      "id": 1,
+      "carStationName": "Mai Linh"
+    },
+    {
+      "id": 2,
+      "carStationName": "Hoàng Long"
+    },
+    {
+      "id": 3,
+      "carStationName": "Phương Trang"
+    }
+  ],
+  "carRegister": [
+    {
+      "id": 1,
+      "carNumber": 1231,
+      "carType": {
+        "id": 1,
+        "carTypeName": "Giường nằm"
+      },
+      "carStation": {
+        "id": 1,
+        "carStationName": "Mai Linh"
+      },
+      "departure": "Đà Nẵng",
+      "arrive": "Quảng Trị",
+      "phone": "0935845632",
+      "email": "abc@gmail.com",
+      "departureHour": "13:20",
+      "arriveHour": "15:00"
+    }
+  ]
+}

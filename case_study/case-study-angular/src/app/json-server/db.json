@@ -81,6 +81,51 @@
       "customerEmail": "lam@gmail.com",
       "customerAddress": "Da Nang",
       "id": 4
+    },
+    {
+      "customerCode": "KH-1111",
+      "customerType": {
+        "id": 3,
+        "customerTypeName": "Gold"
+      },
+      "customerName": "Lam Nguyen",
+      "customerBirthday": "2003-04-04",
+      "customerGender": "Male",
+      "customerIdCard": "123123123",
+      "customerPhone": "0901161098",
+      "customerEmail": "wanerbros9@gmail.com",
+      "customerAddress": "8 Dao Tan",
+      "id": 5
+    },
+    {
+      "customerCode": "KH-1111",
+      "customerType": {
+        "id": 3,
+        "customerTypeName": "Gold"
+      },
+      "customerName": "Lam Nguyen",
+      "customerBirthday": "2021-07-07T17:00:00.000Z",
+      "customerGender": "Male",
+      "customerIdCard": "123123123",
+      "customerPhone": "0901111111",
+      "customerEmail": "lam@gmail.com",
+      "customerAddress": "Hue",
+      "id": 6
+    },
+    {
+      "customerCode": "KH-1122",
+      "customerType": {
+        "id": 3,
+        "customerTypeName": "Gold"
+      },
+      "customerName": "Lam Nguyen",
+      "customerBirthday": "2021-10-14T17:00:00.000Z",
+      "customerGender": "Female",
+      "customerIdCard": "123123123",
+      "customerPhone": "0901111111",
+      "customerEmail": "lam@gmail.com",
+      "customerAddress": "Hue",
+      "id": 7
     }
   ],
   "educationDegrees": [

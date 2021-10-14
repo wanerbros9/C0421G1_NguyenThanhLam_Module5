@@ -10,8 +10,8 @@ import {AppRoutingModule} from './app-routing.module';
 import {MatButtonModule} from '@angular/material/button';
 import {HttpClientModule} from '@angular/common/http';
 import {MatDialog, MatDialogModule} from '@angular/material/dialog';
-import { CreateShowTimeComponent } from './cinema/create-show-time/create-show-time.component';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import {CreateShowTimeComponent} from './cinema/create-show-time/create-show-time.component';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {ReactiveFormsModule} from '@angular/forms';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatDatepickerModule} from '@angular/material/datepicker';
@@ -20,6 +20,8 @@ import {MatNativeDateModule} from '@angular/material/core';
 import {MatSelectModule} from '@angular/material/select';
 import {MatSnackBar, MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatTableModule} from '@angular/material/table';
+import {MatSortModule} from '@angular/material/sort';
+import {SlicePipe} from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -46,6 +48,7 @@ import {MatTableModule} from '@angular/material/table';
     MatNativeDateModule,
     MatSelectModule,
     MatTableModule,
+    MatSortModule
   ],
   providers: [],
   bootstrap: [AppComponent]

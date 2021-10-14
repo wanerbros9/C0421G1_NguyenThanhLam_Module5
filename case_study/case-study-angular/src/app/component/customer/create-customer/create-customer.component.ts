@@ -5,6 +5,7 @@ import {Router} from "@angular/router";
 import {FormControl, FormGroup, Validators} from "@angular/forms";
 import {CustomerType} from "../models/customer-type";
 import {CustomerTypeService} from "../service/customer-type.service";
+import {MatSnackBar} from "@angular/material/snack-bar";
 
 @Component({
   selector: 'app-create-customer',
@@ -17,7 +18,10 @@ export class CreateCustomerComponent implements OnInit {
   customerType: CustomerType[];
   customerForm: FormGroup
 
-  constructor(private customerService: CustomerService, private customerTypeService: CustomerTypeService, private router: Router) {
+  constructor(private customerService: CustomerService,
+              private customerTypeService: CustomerTypeService,
+              private router: Router,
+              private snackBar: MatSnackBar) {
     this.customerForm = new FormGroup({
       // customerId: new FormControl(""),
       customerCode: new FormControl("", [Validators.required, Validators.pattern(/^KH-[0-9]{4}$/)]),
@@ -47,8 +51,13 @@ export class CreateCustomerComponent implements OnInit {
     if (this.customerForm.valid) {
       this.customerService.createCustomer(this.customerForm.value).subscribe(next => {
         this.router.navigateByUrl("/customer/list");
+        this.openSnackBar('Success','Close')
       });
     }
+  }
+
+  openSnackBar(message: string, action: string) {
+    this.snackBar.open(message, action);
   }
 
   validationMessage = {
