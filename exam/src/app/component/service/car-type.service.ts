@@ -8,7 +8,8 @@ import {CarType} from '../models/car-type';
 })
 export class CarTypeService {
 
-  private api_url_carType = 'http://localhost:3000/carTypes';
+  // private api_url_carType = 'http://localhost:3000/carTypes';
+  private api_url_carType = 'http://localhost:8080/carType/api';
 
   constructor(private http: HttpClient) {
   }

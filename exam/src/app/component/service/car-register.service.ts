@@ -9,7 +9,8 @@ import {CarRegister} from '../models/car-register';
 })
 export class CarRegisterService {
 
-  private api_url_carRegister = 'http://localhost:3000/carRegister';
+  // private api_url_carRegister = 'http://localhost:3000/carRegister';
+  private api_url_carRegister = 'http://localhost:8080/car/api';
 
   constructor(private http: HttpClient) {
   }
