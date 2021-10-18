@@ -1,0 +1,75 @@
+<div class="container-fluid" style="padding-top: 20px; padding-bottom: 30px">
+  <div class="row">
+    <div class="col-lg-12" align="center">
+      <h2>Chỉnh sửa thông tin xe khách</h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-3"></div>
+    <div class="col-lg-6">
+      <form [formGroup]="createForm" (ngSubmit)="create()">
+        <div class="mb-3">
+          <label for="carNumber" class="form-label">Số xe</label>
+          <input type="text" class="form-control" formControlName="carNumber" id="carNumber">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Loại xe</label>
+          <select class="form-control" formControlName="carType">
+            <option *ngFor="let type of carTypeList" [ngValue]="type"
+                    [selected]="type.carTypeName == createForm.controls.carType.value.carTypeName">{{type.carTypeName}}</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Nhà xe</label>
+          <select class="form-control" formControlName="carStation">
+            <option *ngFor="let type of carStationList" [ngValue]="type"
+                    [selected]="type.carStationName == createForm.controls.carStation.value.carStationName">{{type.carStationName}}</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label for="departure" class="form-label">Nơi đi</label>
+          <input type="text" class="form-control" formControlName="departure" id="departure">
+        </div>
+        <div class="mb-3">
+          <label for="arrive" class="form-label">Nơi đến</label>
+          <input type="text" class="form-control" formControlName="arrive" id="arrive">
+        </div>
+        <div class="mb-3">
+          <label for="phone" class="form-label">Điện thoại</label>
+          <input type="text" class="form-control" formControlName="phone" id="phone">
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input type="text" class="form-control" formControlName="email" id="email">
+        </div>
+        <div class="mb-3">
+          <label for="departureHour" class="form-label">Giờ đi</label>
+          <input type="time" class="form-control" formControlName="departureHour" id="departureHour">
+        </div>
+        <div class="mb-3">
+          <label for="arriveHour" class="form-label">Giờ đến</label>
+          <input type="time" class="form-control" formControlName="arriveHour" id="arriveHour">
+        </div>
+        <div>
+          <span style="padding-right: 30px">
+            <button routerLink="" mat-raised-button color="accent">Quay lại</button>
+          </span>
+          <span>
+            <button type="submit" mat-raised-button color="accent">Submit</button>
+          </span>
+        </div>
+      </form>
+    </div>
+    <div class="col-lg-3"></div>
+  </div>
+</div>
+
+<mat-form-field appearance="fill" hidden>
+  <mat-label>Message</mat-label>
+  <input matInput value="Success" #message>
+</mat-form-field>
+
+<mat-form-field appearance="fill" hidden>
+  <mat-label>Action</mat-label>
+  <input matInput value="Close" #action>
+</mat-form-field>

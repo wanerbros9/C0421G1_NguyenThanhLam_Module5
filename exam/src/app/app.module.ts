@@ -16,13 +16,15 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { CreateCarRegisterComponent } from './component/create-car-register/create-car-register.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CarRegisterComponent,
     EditCarRegisterComponent,
-    DeleteCarRegisterComponent
+    DeleteCarRegisterComponent,
+    CreateCarRegisterComponent
   ],
   imports: [
     BrowserModule,

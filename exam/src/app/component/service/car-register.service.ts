@@ -24,10 +24,14 @@ export class CarRegisterService {
   }
 
   update(id: number, carRegister: CarRegister): Observable<CarRegister | any> {
-    return this.http.put(this.api_url_carRegister + '/' + id, carRegister);
+    return this.http.put(this.api_url_carRegister + '/edit', carRegister);
   }
 
   delete(id: number): Observable<CarRegister | any> {
-    return this.http.delete(this.api_url_carRegister + '/' + id);
+    return this.http.delete(this.api_url_carRegister + '/delete/' + id);
+  }
+
+  create(newCar: CarRegister): Observable<CarRegister | any> {
+    return this.http.post(this.api_url_carRegister + '/add', newCar);
   }
 }

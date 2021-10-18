@@ -41,6 +41,7 @@ export class EditCarRegisterComponent implements OnInit {
               private activatedRoute: ActivatedRoute,
               private snackBar: MatSnackBar) {
     this.activatedRoute.paramMap.subscribe((paramMap: ParamMap) => {
+      console.log(this.carRegister);
       this.id = +paramMap.get('id');
       this.getList();
       console.log(this.carRegister);

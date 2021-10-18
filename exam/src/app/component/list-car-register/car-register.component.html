@@ -4,7 +4,7 @@
   </div>
   <div class="row">
     <div class="col-lg-12" style="padding-bottom: 10px">
-      <button mat-raised-button color="accent">Thêm mới</button>
+      <button mat-raised-button color="accent" [routerLink]="['/car/api/add']">Thêm mới</button>
     </div>
   </div>
   <div class="row">
@@ -36,7 +36,7 @@
           <td>{{carRegister.departureHour}}</td>
           <td>{{carRegister.arriveHour}}</td>
           <td>
-            <a mat-raised-button color="primary" [routerLink]="['/car/edit', carRegister.id]">Chỉnh sửa</a>
+            <a mat-raised-button color="primary" [routerLink]="['/car/api/edit', carRegister.id]">Chỉnh sửa</a>
           </td>
           <td>
             <button mat-raised-button color="warn" (click)="deleteCarRegister(carRegister.id, carRegister.carNumber)"
