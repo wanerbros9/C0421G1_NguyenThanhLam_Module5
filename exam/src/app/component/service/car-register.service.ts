@@ -20,7 +20,7 @@ export class CarRegisterService {
   }
 
   findById(id: number): Observable<CarRegister | any> {
-    return this.http.get(this.api_url_carRegister + '/' + id);
+    return this.http.get(this.api_url_carRegister + '/find/' + id);
   }
 
   update(id: number, carRegister: CarRegister): Observable<CarRegister | any> {
